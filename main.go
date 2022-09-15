@@ -1,8 +1,8 @@
 package main
 
 import "fmt"
-import "github.com/cagriyildirimr/euler/fibonacci"
+import "github.com/cagriyildirimr/euler/exponentiation"
 
 func main() {
-	fmt.Println(fibonacci.FibonacciEvenSum(4000000))
+	fmt.Println(exponentiation.MinimumExponentiation(2, 30))
 }
