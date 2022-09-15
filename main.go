@@ -1,8 +1,8 @@
 package main
 
 import "fmt"
-import "github.com/cagriyildirimr/euler/multiplies"
+import "github.com/cagriyildirimr/euler/fibonacci"
 
 func main() {
-	fmt.Println(multiplies.MultipliesOfXAndY(1000, 3, 5))
+	fmt.Println(fibonacci.FibonacciEvenSum(4000000))
 }
