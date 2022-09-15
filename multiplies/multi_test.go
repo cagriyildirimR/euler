@@ -17,3 +17,17 @@ func TestMultipliesOfXAndY(t *testing.T) {
 		}
 	}
 }
+
+func TestSumList(t *testing.T) {
+	for _, test := range []struct {
+		list []int
+		want int
+	}{
+		{[]int{}, 0}, // Empty list
+		{[]int{1, 2, 3, 4, 5, 6}, 21},
+	} {
+		if got := sumList(test.list); got != test.want {
+			t.Errorf("List values are not add up to %v", test.want)
+		}
+	}
+}
