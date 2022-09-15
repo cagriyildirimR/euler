@@ -5,13 +5,13 @@ func fibonacciEvenSumTailRec(limit, first, second, sum int) (int, int, int, int)
 		return limit, first, second, sum
 	}
 	first, second = second, first+second
-	if isEven(second) {
+	if IsEven(second) {
 		sum += second
 	}
 	return fibonacciEvenSumTailRec(limit, first, second, sum)
 }
 
-func isEven(v int) bool {
+func IsEven(v int) bool {
 	return v%2 == 0
 }
 

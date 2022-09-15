@@ -1,6 +1,9 @@
 package fibonacci
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestFibonacci(t *testing.T) {
 
@@ -15,3 +18,23 @@ func TestFibonacci(t *testing.T) {
 		}
 	}
 }
+
+func ExampleIsEven() {
+	fmt.Println(IsEven(1))
+	fmt.Println(IsEven(2))
+	fmt.Println(IsEven(1088347120))
+	// Output:
+	// false
+	// true
+	// true
+}
+
+// go test -bench=. flag will run only benchmarks or run specific benchmark -bench=BenchmarkName
+// -benchmem flag will show memory allocation stats
+func BenchmarkFibonacci(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		FibonacciEvenSum(i)
+	}
+}
+
+// for coverage use
